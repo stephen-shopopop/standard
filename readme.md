@@ -10,18 +10,30 @@
 [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
 [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
 
-# NODE typescript template
+# NODEJS standard library
 
 ## Description
 
-Template nodejs typescript with ts-standard
+Standard library for nodejs
 
-## Installation nodejs via nvm (node version manager)
+### Installation
+
+Add .npmrc file in your repository
+
+> @stephen-shopopop:registry=https://npm.pkg.github.com
+
+
+```bash
+npm install @stephen-shopopop/std@latest
+```
+
+## Contributing
+### Installation nodejs via nvm (node version manager)
 
 - [macos/linux](https://github.com/nvm-sh/nvm) or use Makefile command: ```make nvm```
 - [windows](https://github.com/coreybutler/nvm-windows)
 
-## Contributing
+## Commands
 
 1. npm run build -  Build library.
 2. npm run start - start project
@@ -31,32 +43,14 @@ Template nodejs typescript with ts-standard
 6. npm run typecheck - Run typescript check.
 7. npm run doc - Generate html doc.
 8. npm run release - Release library
-9.  npm run fix - Fix library
-
-## Production
-
-```bash
-npm i --production
-npm start
-```
+9. npm run fix - Fix library
 
 ## Docs
-
 ### Summary
 
-### Summary
-
-- [Apprendre nodejs](https://github.com/stephendltg/nodebook)
-- [Apprendre typescript](https://www.typescriptlang.org/fr/)
-- [Typescript configuration](https://github.com/tsconfig/bases)
 - [Reference javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 - [ECMA-262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 - [summary of the new ES version by example](https://github.com/gautemo/ES-Intro)
-- [Nodejs best practices](https://github.com/goldbergyoni/nodebestpractices)
-- [Nodejs testing best practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
-- [NPM documentation](https://docs.npmjs.com/cli/v8/commands)
-- [Package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
-- [Apprendre Git](https://www.atlassian.com/fr/git/tutorials/setting-up-a-repository)
 - [Git conventions](conventions.md)
 - [library & tools](tools.md)
 
@@ -64,5 +58,4 @@ npm start
 
 - [js-standard](https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard)
 - [jest runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner)
-- [thunder client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- [git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
