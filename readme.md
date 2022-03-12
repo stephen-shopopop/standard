@@ -16,6 +16,8 @@
 
 Standard library for nodejs
 
+[Documentation](https://stephen-shopopop.github.io/standard/)
+
 ### Installation
 
 Add .npmrc file in your repository
@@ -24,7 +26,7 @@ Add .npmrc file in your repository
 
 
 ```bash
-npm install @stephen-shopopop/standard@latest
+npm install @stephen-shopopop/standard@1.1.1
 ```
 
 ## Contributing
