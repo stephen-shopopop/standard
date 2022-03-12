@@ -54,7 +54,7 @@ export function rtrim (char?: string): Handle<string> {
  * import assert from 'assert/strict'
  *
  * const stripSlashes = rtrim('/')
- * const path = stripSlashesRight('////delivery////')
+ * const path = stripSlashes('////delivery////')
  *
  * assert.equal(path, 'delivery')
  * ```
