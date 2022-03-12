@@ -26,7 +26,7 @@ Add .npmrc file in your repository
 
 
 ```bash
-npm install @stephen-shopopop/standard@1.1.1
+npm install @stephen-shopopop/standard@1.2.0
 ```
 
 ## Contributing
