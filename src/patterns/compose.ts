@@ -17,7 +17,7 @@ import { Handle } from '../types/pattern'
  *
  * const email = createEmailByName('jean')
  *
- * assert.equal(email, 'Jean')
+ * assert.equal(email, 'jean@example.org')
  * ```
  */
 export function compose <T> (...functions: Array<Handle<T>>): Handle<T> {
