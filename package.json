@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/stephen-shopopop/standard/issues"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "contributors": [
     "stephen.deletang@shopopop.com"
   ],
