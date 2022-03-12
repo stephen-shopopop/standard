@@ -1,10 +1,9 @@
 {
-  "name": "@stephen-shopopop/std",
+  "name": "@stephen-shopopop/standard",
   "version": "1.1.1",
   "description": "Package libray standard",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "private": true,
   "engines": {
     "node": ">=14.15.3",
     "npm": ">=6.14.11"
