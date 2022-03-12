@@ -7,7 +7,7 @@
  * @returns string
  *
  * ```ts
- * import { sanitizeAllspecialsChars } from "@shopopop/std"
+ * import { sanitizeAllspecialsChars } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const name = sanitizeAllspecialsChars('<p>shopopop</p><br>')

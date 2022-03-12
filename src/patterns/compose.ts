@@ -7,7 +7,7 @@ import { Handle } from '../types/pattern'
  * @returns T
  *
  * ```ts
- * import { compose } from "@shopopop/std"
+ * import { compose } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const createEmailByName = compose(

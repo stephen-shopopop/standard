@@ -6,7 +6,7 @@
  * @returns string
  *
  * ```ts
- * import { escapeBadUnicode } from "@shopopop/std"
+ * import { escapeBadUnicode } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const string = escapeBadUnicode('Hello world 🙂!')

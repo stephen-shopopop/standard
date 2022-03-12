@@ -6,7 +6,7 @@
  * @returns string
  *
  * ```ts
- * import { stripTags } from "@shopopop/std"
+ * import { stripTags } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const textarea = stripTags('<p>shopopop</p><br>')
@@ -26,7 +26,7 @@ export const stripTags = (value: string): string =>
  * @returns string
  *
  * ```ts
- * import { removeAccents } from "@shopopop/std"
+ * import { removeAccents } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const address = removeAccents('Allée du Moulin 44980 Angoulême')

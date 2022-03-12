@@ -8,7 +8,7 @@ import { Handle } from '../types/pattern'
  * @returns Handle<string>
  *
  * ```ts
- * import { ltrim } from "@shopopop/std"
+ * import { ltrim } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const stripSlashesLeft = ltrim('/')
@@ -29,7 +29,7 @@ export function ltrim (char?: string): Handle<string> {
  * @returns Handle<string>
  *
  * ```ts
- * import { rtrim } from "@shopopop/std"
+ * import { rtrim } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const stripSlashesRight = rtrim('/')
@@ -50,7 +50,7 @@ export function rtrim (char?: string): Handle<string> {
  * @returns Handle<string>
  *
  * ```ts
- * import { trim } from "@shopopop/std"
+ * import { trim } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const stripSlashes = rtrim('/')
@@ -73,7 +73,7 @@ export function trim (char?: string): Handle<string> {
  * @returns string
  *
  * ```ts
- * import { quoteString } from "@shopopop/std"
+ * import { quoteString } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * assert.equal(quoteString('lorem ipsum'), '"lorem ipsum"')

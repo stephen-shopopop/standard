@@ -7,7 +7,7 @@ import { Handle } from '../types/pattern'
  * @returns T
  *
  * ```ts
- * import { pipe } from "@shopopop/std"
+ * import { pipe } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
  * const sanitizeName = pipe(

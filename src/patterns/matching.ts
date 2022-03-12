@@ -10,7 +10,7 @@ const throwError = (): any => {
  * Pattern for pattern matching
  *
  * ```ts
- * import { when } from "@shopopop/std"
+ * import { when } from "@stephen-shopopop/standard"
  *
  * const predicate = (name: String) => typeof name === 'string'
  * const execution = (name: String) => name.toUpperCase()

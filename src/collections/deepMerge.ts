@@ -36,7 +36,7 @@ function mergeObjects (
  * @param other Object
  * @returns Object
  * ```ts
- * import { deepMerge } from "@shopopop/std"
+ * import { deepMerge } from "@stephen-shopopop/standard"
  * import assert from "assert"
  *
  * const a = {foo: true}

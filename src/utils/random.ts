@@ -6,7 +6,7 @@
  * @param upper number
  * @returns number
  * ```ts
- * import { randomInteger } from "@shopopop/std"
+ * import { randomInteger } from "@stephen-shopopop/standard"
  *
  * const random = randomInteger(0, 99)
  * ```
@@ -19,7 +19,7 @@ export function randomInteger (lower: number, upper: number): number {
  * @param length number salt length
  * @returns string
  * ```ts
- * import { randomSalt } from "@shopopop/std"
+ * import { randomSalt } from "@stephen-shopopop/standard"
  *
  * const random = randomSalt(16)
  * ```

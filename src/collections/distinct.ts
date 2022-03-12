@@ -5,7 +5,7 @@
  * @returns array
  * Distinct elements in array
  * ```ts
- * import { distinct } from from "@shopopop/std"
+ * import { distinct } from from "@stephen-shopopop/standard"
  * import assert from "assert"
  *
  * const numbers = [ 3, 2, 5, 2, 5 ]
