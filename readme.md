@@ -61,3 +61,10 @@ npm install @stephen-shopopop/standard@1.2.0
 - [js-standard](https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard)
 - [jest runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner)
 
+### Package maintenance
+
+A modern cli tool that keeps your deps fresh
+
+```bash
+npx taze
+```
