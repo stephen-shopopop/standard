@@ -32,7 +32,7 @@ export const when = <T>(predicate: Predicate<T>) => {
  *  Pattern matching
  *
  * ```ts
- * import { match, when } from "@shopopop/std"
+ * import { match, when } from "@stephen-shopopop/std"
  * import assert from 'assert/strict'
  *
  * const predicate = (name: String) => typeof name === 'string'
