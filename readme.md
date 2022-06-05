@@ -26,7 +26,7 @@ Add .npmrc file in your repository
 
 
 ```bash
-npm install @stephen-shopopop/standard@1.2.0
+npm install @stephen-shopopop/standard
 ```
 
 ## Contributing
@@ -45,7 +45,7 @@ npm install @stephen-shopopop/standard@1.2.0
 6. npm run typecheck - Run typescript check.
 7. npm run doc - Generate html doc.
 8. npm run release - Release library
-9. npm run fix - Fix library
+9. npm run minor - Minor library
 
 ## Docs
 ### Summary
