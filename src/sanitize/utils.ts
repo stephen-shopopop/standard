@@ -18,7 +18,7 @@ import { Handle } from '../types/pattern'
  * ```
  */
 export function ltrim (char?: string): Handle<string> {
-  return (string: String) =>
+  return (string: string) =>
     typeof char !== 'string'
       ? string.trimStart()
       : string.replace(new RegExp(`^${char}*`), '')

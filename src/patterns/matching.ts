@@ -12,8 +12,8 @@ const throwError = (): any => {
  * ```ts
  * import { when } from "@stephen-shopopop/standard"
  *
- * const predicate = (name: String) => typeof name === 'string'
- * const execution = (name: String) => name.toUpperCase()
+ * const predicate = (name: string) => typeof name === 'string'
+ * const execution = (name: string) => name.toUpperCase()
  * const pattern = when(predicate)(execution)
  * ```
  */
@@ -35,8 +35,8 @@ export const when = <T>(predicate: Predicate<T>) => {
  * import { match, when } from "@stephen-shopopop/std"
  * import assert from 'assert/strict'
  *
- * const predicate = (name: String) => typeof name === 'string'
- * const execution = (name: String) => name.toUpperCase()
+ * const predicate = (name: string) => typeof name === 'string'
+ * const execution = (name: string) => name.toUpperCase()
  * const pattern = when(predicate)(execution)
  *
  * const name = match('lorem')(pattern)()

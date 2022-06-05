@@ -23,13 +23,4 @@ describe('[pattern/pipeAsync] pipeAsync', () => {
 
     expect(word).toEqual('Lorems')
   })
-
-  test('return type number when curring pipe with type string', async () => {
-    const word = await asyncPipe(
-      (word: string) => word.trim(),
-      (word: string) => Number(word)
-    )(' 1')
-
-    expect(word).toEqual(1)
-  })
 })

@@ -3,6 +3,8 @@
  */
 export type Handle<T> = (value: T) => T
 
+export type PromiseHandle<T> = (value: T) => Promise<T>
+
 /**
  * Predicate return a Boolean
  */

@@ -1,6 +1,6 @@
 // Copyright 2021-2022 Shopopop. All rights reserved. ISC license.
 
-import { Handle } from '../types/pattern'
+import { Handle, PromiseHandle } from '../types/pattern'
 
 /**
  * @param functions Handle
@@ -21,11 +21,11 @@ import { Handle } from '../types/pattern'
  * assert.equal(name, 'Jeans')
  * ```
  */
-export function asyncPipe <T> (...functions: Function[]): Handle<T> {
+export function asyncPipe <T> (...functions: Array<Handle<T> | PromiseHandle<T>>): Handle<T> | PromiseHandle<T> {
   return (arg: T): T =>
     functions.reduce((prev: T, currentFn: Function) =>
       prev instanceof Promise
-        ? prev.then(value => currentFn(value))
+        ? prev.then(async value => currentFn(value))
         : currentFn(prev)
     , arg)
 }
