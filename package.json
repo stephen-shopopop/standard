@@ -38,7 +38,7 @@
     "typecheck": "tsc --noEmit",
     "release": "standard-version",
     "prerelease": "standard-version -- --prerelease",
-    "fix": "standard-version -- --release-as minor",
+    "minor": "standard-version -- --release-as minor",
     "doc": "rimraf docs && npx typedoc src/index.ts"
   },
   "keywords": [
