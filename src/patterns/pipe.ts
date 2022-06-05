@@ -21,6 +21,6 @@ import { Handle } from '../types/pattern'
  * ```
  */
 export function pipe <T> (...functions: Array<Handle<T>>): Handle<T> {
-  return (arg: T) =>
-    functions.reduce((prev, current) => current(prev), arg)
+  return (arg: T): T =>
+    functions.reduce((prev: T, currentFn: Handle<T>) => currentFn(prev), arg)
 }

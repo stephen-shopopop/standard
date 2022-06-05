@@ -21,8 +21,8 @@ import { Handle } from '../types/pattern'
  * ```
  */
 export function compose <T> (...functions: Array<Handle<T>>): Handle<T> {
-  return (arg: T) =>
+  return (arg: T): T =>
     functions
       .reverse()
-      .reduce((previous, current) => current(previous), arg)
+      .reduce((previous: T, current: Handle<T>) => current(previous), arg)
 }

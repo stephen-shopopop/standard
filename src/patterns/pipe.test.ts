@@ -23,8 +23,8 @@ describe('[pattern/pipe] pipe', () => {
 
   test('return type array when curring pipe with type array', () => {
     const words = pipe(
-      (words: String[]) => words.map((word: String) => word.trim()),
-      (words: String[]) => words.map((word: String) => word.charAt(0).toUpperCase() + word.slice(1))
+      (words: string[]) => words.map((word: string) => word.trim()),
+      (words: string[]) => words.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
     )([' Lorem', 'ipsum'])
 
     expect(words).toEqual(['Lorem', 'Ipsum'])
