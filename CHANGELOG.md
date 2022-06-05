@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/stephen-shopopop/standard/compare/v1.3.1...v1.3.2) (2022-06-05)
+
+
+### Bug Fixes
+
+* **pattern:** FIX pipe, MERGE function async & sync ([3ca51f2](https://github.com/stephen-shopopop/standard/commit/3ca51f26de5f6233a838ffab12157346bbbef23d))
+
 ### [1.3.1](https://github.com/stephen-shopopop/standard/compare/v1.3.0...v1.3.1) (2022-06-05)
 
 
