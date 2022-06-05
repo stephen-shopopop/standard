@@ -13,7 +13,7 @@ describe('[pattern/compose] compose', () => {
   })
 
   test('return type string when curring compose with type string', () => {
-    const word: string = compose(
+    const word = compose(
       (word: string) => word + 'example.com',
       (word: string) => word + '@'
     )('lorem')

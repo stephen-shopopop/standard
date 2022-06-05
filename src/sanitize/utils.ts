@@ -59,7 +59,7 @@ export function rtrim (char?: string): Handle<string> {
  * assert.equal(path, 'delivery')
  * ```
  */
-export function trim (char?: string): Handle<string> {
+export function trim (char?: string) {
   return (string: string) => {
     return pipe(
       ltrim(char),
