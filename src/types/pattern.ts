@@ -1,9 +1,7 @@
 /**
  * Handle returns the same type on output as on input
  */
-export type Handle<T> = (value: T) => T
-
-export type PromiseHandle<T> = (value: T) => Promise<T>
+export type Handle<T> = (value: T) => T | Promise<T>
 
 /**
  * Predicate return a Boolean

@@ -1,6 +1,6 @@
 // Copyright 2021-2022 Shopopop. All rights reserved. ISC license.
 
-import { Handle, PromiseHandle } from '../types/pattern'
+import { Handle } from '../types/pattern'
 
 /**
  * @param functions Handle
@@ -20,7 +20,7 @@ import { Handle, PromiseHandle } from '../types/pattern'
  * assert.equal(email, 'jean@example.org')
  * ```
  */
-export function compose <T> (...functions: Array<Handle<T> | PromiseHandle<T>>): Handle<T> | PromiseHandle<T> {
+export function compose <T> (...functions: Array<Handle<T>>): Handle<T> {
   return (arg: T): T =>
     functions
       .reverse()
