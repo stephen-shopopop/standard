@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/stephen-shopopop/standard/compare/v1.3.2...v1.3.3) (2022-06-06)
+
+
+### Bug Fixes
+
+* **types:** FIX type handle ([5c483f1](https://github.com/stephen-shopopop/standard/commit/5c483f15ba73388b77f620339eb2f34bf43f25b7))
+
 ### [1.3.2](https://github.com/stephen-shopopop/standard/compare/v1.3.1...v1.3.2) (2022-06-05)
 
 
