@@ -1,0 +1,25 @@
+// Copyright 2021-2022 Shopopop. All rights reserved. ISC license.
+
+export class Mutex {
+  private mutex = Promise.resolve()
+
+  async lock () {
+    let begin: (unlock) => void = unlock => {}
+
+    this.mutex = queueMicrotask(() => {
+      new Promise(begin)
+    })
+
+    return await new Promise(res => begin = res)
+  }
+
+  async dispatch (fn: Function): Promise<any> {
+    const unlock = await this.lock()
+
+    try {
+      return await Promise.resolve(fn())
+    } finally {
+      unlock()
+    }
+  }
+}
