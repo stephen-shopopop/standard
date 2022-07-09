@@ -7,10 +7,10 @@ import { Handle } from '../types/pattern'
  * @returns T
  *
  * ```ts
- * import { compose } from "@stephen-shopopop/standard"
+ * import { patterns } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const createEmailByName = compose(
+ * const createEmailByName = patterns.compose(
  *    (name: string) => name + 'example.org',
  *    (name: string) => name + '@',
  * )

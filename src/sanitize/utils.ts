@@ -8,10 +8,10 @@ import { Handle } from '../types/pattern'
  * @returns Handle<string>
  *
  * ```ts
- * import { ltrim } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const stripSlashesLeft = ltrim('/')
+ * const stripSlashesLeft = sanitize.ltrim('/')
  * const path = stripSlashesLeft('///delivery')
  *
  * assert.equal(path, 'delivery')
@@ -29,10 +29,10 @@ export function ltrim (char?: string): Handle<string> {
  * @returns Handle<string>
  *
  * ```ts
- * import { rtrim } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const stripSlashesRight = rtrim('/')
+ * const stripSlashesRight = sanitize.rtrim('/')
  * const path = stripSlashesRight('delivery////')
  *
  * assert.equal(path, 'delivery')
@@ -50,10 +50,10 @@ export function rtrim (char?: string): Handle<string> {
  * @returns Handle<string>
  *
  * ```ts
- * import { trim } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const stripSlashes = rtrim('/')
+ * const stripSlashes = sanitize.rtrim('/')
  * const path = stripSlashes('////delivery////')
  *
  * assert.equal(path, 'delivery')
@@ -73,11 +73,11 @@ export function trim (char?: string): Handle<string> {
  * @returns string
  *
  * ```ts
- * import { quoteString } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * assert.equal(quoteString('lorem ipsum'), '"lorem ipsum"')
- * assert.equal(quoteString(['lorem', 99]), 'lorem,99')
+ * assert.equal(sanitize.quoteString('lorem ipsum'), '"lorem ipsum"')
+ * assert.equal(sanitize.quoteString(['lorem', 99]), 'lorem,99')
  * ```
  */
 export function quoteString (value: unknown): string {

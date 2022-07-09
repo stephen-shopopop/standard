@@ -2,14 +2,15 @@ import { describe, expect, test } from '@jest/globals'
 import { promiseAllSettled } from './promiseAllSettled'
 
 describe('[concurrency/promiseAll] pipe', () => {
-  test('it should return result all promises', async () => {
+  test('it should return all promises result', async () => {
     async function fn (): Promise<number> {
       return await Promise.resolve(9)
     }
 
-    const ret = await promiseAllSettled([
+    const ret = await promiseAllSettled<number | string>([
       fn(),
-      Promise.resolve(87)
+      Promise.resolve(87),
+      Promise.resolve('test')
     ])
 
     expect(ret).toEqual([
@@ -19,6 +20,9 @@ describe('[concurrency/promiseAll] pipe', () => {
       }, {
         status: 'fulfilled',
         value: 87
+      }, {
+        status: 'fulfilled',
+        value: 'test'
       }
     ])
   })
@@ -28,12 +32,12 @@ describe('[concurrency/promiseAll] pipe', () => {
       return await Promise.resolve(9)
     }
 
-    const ret = await promiseAllSettled([
-      fn(),
-      Promise.reject(new Error('Error promise'))
+    const [ret] = await promiseAllSettled([
+      Promise.reject(new Error('Error promise')),
+      fn()
     ])
 
-    expect(ret).toEqual('')
-    expect(ret[1].reason.message).toEqual('Error promise')
+    expect(ret.status).toEqual('rejected')
+    expect(ret.reason.message).toEqual('Error promise')
   })
 })

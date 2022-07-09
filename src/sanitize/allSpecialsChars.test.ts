@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals'
 import {
-  sanitizeAllspecialsChars
+  allspecialsChars
 } from './allSpecialsChars'
 
 describe('[sanitize/sanitizeAllspecialschars] sanitizeAllspecialsChars', () => {
@@ -12,6 +12,6 @@ describe('[sanitize/sanitizeAllspecialschars] sanitizeAllspecialsChars', () => {
     ${'\\n \\\\H [4,9]'} || ${'n H 49'}
     ${'/?¿¡[]=<>:;,._-\'"&$#*()|~`!{}'} || ${''}
   `('returns $expected when sanitizeAllspecialsChars $string', ({ string, expected }) => {
-    expect(sanitizeAllspecialsChars(string)).toEqual(expected)
+    expect(allspecialsChars(string)).toEqual(expected)
   })
 })

@@ -7,10 +7,10 @@ import { Handle } from '../types/pattern'
  * @returns T
  *
  * ```ts
- * import { pipe } from "@stephen-shopopop/standard"
+ * import { patterns } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const sanitizeName = pipe(
+ * const sanitizeName = patterns.pipe(
  *    (name: string) => name.trim(),
  *    (name: string) => name.charAt(0).toUpperCase() + name.slice(1)
  * )
@@ -21,10 +21,10 @@ import { Handle } from '../types/pattern'
  * ```
  *
  *  * ```ts
- * import { pipe } from "@stephen-shopopop/standard"
+ * import { patterns } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const sanitizeName = pipe(
+ * const sanitizeName = patterns.pipe(
  *    (name: string) => name.trim(),
  *    (name: string) => name.charAt(0).toUpperCase() + name.slice(1),
  *    async(name: string) => await Promise.resolve(name + '!')

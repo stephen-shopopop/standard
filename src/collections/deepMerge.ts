@@ -36,13 +36,13 @@ function mergeObjects (
  * @param other Object
  * @returns Object
  * ```ts
- * import { deepMerge } from "@stephen-shopopop/standard"
+ * import { collections } from "@stephen-shopopop/standard"
  * import assert from "assert"
  *
  * const a = {foo: true}
  * const b = {foo: {bar: true}}
  *
- * assert.equal(deepMerge(a, b), {foo: {bar: true}});
+ * assert.equal(collections.deepMerge(a, b), {foo: {bar: true}});
  * ```
  */
 export function deepMerge<

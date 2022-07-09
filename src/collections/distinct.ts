@@ -5,11 +5,11 @@
  * @returns array
  * Distinct elements in array
  * ```ts
- * import { distinct } from from "@stephen-shopopop/standard"
+ * import { collections } from from "@stephen-shopopop/standard"
  * import assert from "assert"
  *
  * const numbers = [ 3, 2, 5, 2, 5 ]
- * const distinctNumbers = distinct(numbers)
+ * const distinctNumbers = collections.distinct(numbers)
  *
  * assert.equal(distinctNumbers, [ 3, 2, 5 ])
  * ```

@@ -6,10 +6,10 @@
  * @returns string
  *
  * ```ts
- * import { stripTags } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const textarea = stripTags('<p>shopopop</p><br>')
+ * const textarea = sanitize.stripTags('<p>shopopop</p><br>')
  *
  * assert.equal(textarea, 'shopopop')
  * ```
@@ -26,10 +26,10 @@ export const stripTags = (value: string): string =>
  * @returns string
  *
  * ```ts
- * import { removeAccents } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const address = removeAccents('Allée du Moulin 44980 Angoulême')
+ * const address = sanitize.removeAccents('Allée du Moulin 44980 Angoulême')
  *
  * assert.equal(address, 'Allee du Moulin 44980 Angouleme')
  * ```

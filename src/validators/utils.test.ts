@@ -18,7 +18,8 @@ import {
   isDate,
   isMatch,
   isAlpha,
-  isAlphaNum
+  isAlphaNum,
+  isInteger
 } from './utils'
 
 describe('[utils] isArray', () => {
@@ -164,4 +165,10 @@ describe('[validators/utils] isAlpha', () => {
 describe('[validators/utils] isAlphaNum', () => {
   test('"151A" has AlphaNum', () => expect(isAlphaNum('151A')).toBeTruthy())
   test('"151A@" is not AlphaNum', () => expect(isAlphaNum('151A@')).toBeFalsy())
+})
+
+describe('[validators/utils] isInteger', () => {
+  test('1 has Integer', () => expect(isInteger(1)).toBeTruthy())
+  test('"1" is not Integer', () => expect(isInteger('1')).toBeFalsy())
+  test('0.1 is not Integer', () => expect(isInteger(0.1)).toBeFalsy())
 })

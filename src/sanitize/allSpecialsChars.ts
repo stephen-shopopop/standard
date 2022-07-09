@@ -7,15 +7,15 @@
  * @returns string
  *
  * ```ts
- * import { sanitizeAllspecialsChars } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const name = sanitizeAllspecialsChars('<p>shopopop</p><br>')
+ * const name = sanitize.allspecialsChars('<p>shopopop</p><br>')
  *
  * assert.equal(name, 'pshopopoppbr')
  * ```
  */
-export const sanitizeAllspecialsChars = (value: string): string => {
+export const allspecialsChars = (value: string): string => {
   const specialChars = '[/?¿¡\\[\\]=<>:;,\\.\\_\\-\'"&$#*()|~`!{}\\\\]'
 
   return value

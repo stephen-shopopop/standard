@@ -20,6 +20,10 @@ export function isNumber (value: unknown): boolean {
   return typeof value === 'number' || value instanceof Number
 }
 
+export function isInteger (value: unknown): boolean {
+  return Number(value) === value && value % 1 === 0
+}
+
 export function isString (value: unknown): boolean {
   return typeof value === 'string' || value instanceof String
 }

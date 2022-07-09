@@ -10,11 +10,11 @@ const throwError = (): any => {
  * Pattern for pattern matching
  *
  * ```ts
- * import { when } from "@stephen-shopopop/standard"
+ * import { patterns } from "@stephen-shopopop/standard"
  *
  * const predicate = (name: string) => typeof name === 'string'
  * const execution = (name: string) => name.toUpperCase()
- * const pattern = when(predicate)(execution)
+ * const pattern = patterns.when(predicate)(execution)
  * ```
  */
 export const when = <T>(predicate: Predicate<T>) => {
@@ -32,14 +32,14 @@ export const when = <T>(predicate: Predicate<T>) => {
  *  Pattern matching
  *
  * ```ts
- * import { match, when } from "@stephen-shopopop/std"
+ * import { patterns } from "@stephen-shopopop/std"
  * import assert from 'assert/strict'
  *
  * const predicate = (name: string) => typeof name === 'string'
  * const execution = (name: string) => name.toUpperCase()
- * const pattern = when(predicate)(execution)
+ * const pattern = patterns.when(predicate)(execution)
  *
- * const name = match('lorem')(pattern)()
+ * const name = patterns.match('lorem')(pattern)()
  *
  * assert.equal(name, 'LOREM')
  * ```

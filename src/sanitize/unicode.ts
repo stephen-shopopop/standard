@@ -6,10 +6,10 @@
  * @returns string
  *
  * ```ts
- * import { escapeBadUnicode } from "@stephen-shopopop/standard"
+ * import { sanitize } from "@stephen-shopopop/standard"
  * import assert from 'assert/strict'
  *
- * const string = escapeBadUnicode('Hello world 🙂!')
+ * const string = sanitize.escapeBadUnicode('Hello world 🙂!')
  *
  * assert.equal(string, 'Hello world !')
  * ```
