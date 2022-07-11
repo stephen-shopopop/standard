@@ -16,10 +16,10 @@ export function mem (cb: Function): any {
   return {
     json: () => Array.from(n.entries()),
 
-    set: (key: string, value: any, e = 0) =>
+    set: (key: string, value: any, ttl = 0) =>
       n.set(key, {
         value,
-        expiration: e !== 0 ? new Date().getTime() + e >> 0 : 0
+        expiration: ttl !== 0 ? new Date().getTime() + ttl >> 0 : 0
       }),
 
     del: (key: string) => {
