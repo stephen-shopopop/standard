@@ -2,12 +2,18 @@
 
 import { warn } from '../utils'
 
+export interface Make {
+  sub: (topic: string, callback: Function) => void
+  pub: (topic: string, ...data: any) => void
+  unsub: (topic: string, fn?: Function) => void
+}
+
 /**
  * Make channel
  * @param maxSubscribers
  * @returns
  */
-export function make (maxSubscribers = 20): any {
+export function make (maxSubscribers = 20): Make {
   const limit = +maxSubscribers - 1
 
   const n = new Map<string, Function[]>()
@@ -16,17 +22,17 @@ export function make (maxSubscribers = 20): any {
     /**
      * Subscribe to an topic
      * @param topic
-     * @param cb
+     * @param callback
      * @returns
      */
-    sub: (topic: string, cb: Function): void => {
-      if (typeof cb !== 'function') return
+    sub: (topic: string, callback: Function): void => {
+      if (typeof callback !== 'function') return
 
       const i = n.get(topic) ?? []
 
       if (i.length > limit) return
 
-      (i.length > 0 && i.push(cb)) || n.set(topic, [cb])
+      (i.length > 0 && i.push(callback)) || n.set(topic, [callback])
     },
     /**
      * Publish event to topic

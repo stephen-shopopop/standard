@@ -1,10 +1,14 @@
 // Copyright 2021-2022 Shopopop. All rights reserved. ISC license.
 
-import { make } from './make'
+import { make, Make } from './make'
 
-const channel = make()
+/**
+ * Channel
+ */
+const channel: Make = make()
 
 export {
   channel,
-  make
+  make,
+  Make
 }

@@ -12,9 +12,8 @@ describe('[sanitize/utils] ltrim', () => {
     string | char | expected
     ${'//path'} | ${'/'} | ${'path'}
     ${'   path'} | ${undefined} | ${'path'}
-    ${'  path'} | ${null} | ${'path'}
   `('returns $expected when curring $string ltrim char $char', ({ string, char, expected }) => {
-    expect(ltrim(char)(string)).toEqual(expected)
+    expect(ltrim(char)(String(string))).toEqual(expected)
   })
 
   test('ltrim return function', () => {
@@ -29,9 +28,8 @@ describe('[sanitize/utils] rtrim', () => {
     string | char | expected
     ${'path//'} | ${'/'} | ${'path'}
     ${'path   '} | ${undefined} | ${'path'}
-    ${'path   '} | ${null} | ${'path'}
   `('returns $expected when curring $string rtrim char $char', ({ string, char, expected }) => {
-    expect(rtrim(char)(string)).toEqual(expected)
+    expect(rtrim(char)(String(string))).toEqual(expected)
   })
 
   test('rtrim return function', () => {
@@ -46,9 +44,8 @@ describe('[sanitize/utils] trim', () => {
     string | char | expected
     ${'//path//'} | ${'/'} | ${'path'}
     ${'  path   '} | ${undefined} | ${'path'}
-    ${'  path   '} | ${null} | ${'path'}
   `('returns $expected when curring $string rtrim char $char', ({ string, char, expected }) => {
-    expect(trim(char)(string)).toEqual(expected)
+    expect(trim(char)(String(string))).toEqual(expected)
   })
 
   test('trim return function', () => {

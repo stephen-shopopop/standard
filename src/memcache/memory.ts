@@ -1,14 +1,21 @@
 // Copyright 2021-2022 Shopopop. All rights reserved. ISC license.
 
+export interface Mem {
+  json: any
+  set: (key: string, value: any, ttl: number) => any
+  del: (key: string) => void
+  get: (key: string, defaut: any) => any
+}
+
 interface Data {
   expiration: number
   value: any
 }
 
-export function mem (cb: Function): any {
+export function mem (callback: Function): Mem {
   const mutate = (key: string, value?: any): any =>
-    typeof cb === 'function'
-      ? queueMicrotask(() => cb(key, value))
+    typeof callback === 'function'
+      ? queueMicrotask(() => callback(key, value))
       : null
 
   const n = new Map<string, Data>()
@@ -22,7 +29,7 @@ export function mem (cb: Function): any {
         expiration: ttl !== 0 ? new Date().getTime() + ttl >> 0 : 0
       }),
 
-    del: (key: string) => {
+    del: (key: string): void => {
       return n.delete(key) && mutate(key, null)
     },
 
