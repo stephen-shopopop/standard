@@ -8,13 +8,13 @@ describe('[concurrency/promiseAll] pipe', () => {
       return await Promise.resolve(9)
     }
 
-    const ret = await promiseAll<string | number>([
+    const result = await promiseAll<number | string>([
       fn(),
       Promise.resolve(87),
       Promise.resolve('test')
     ])
 
-    expect(ret).toEqual([9, 87, 'test'])
+    expect(result).toEqual([9, 87, 'test'])
   })
 
   test('An promise error should stop promiseAll and catch error', async () => {

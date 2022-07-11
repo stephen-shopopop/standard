@@ -15,7 +15,7 @@ export async function promiseAll<T> (
   let ret: Array<Awaited<T>> = []
 
   while (promises.length > 0) {
-    const batchResult = await Promise.all(promises.splice(0, n))
+    const batchResult = await Promise.all<Promise<T>>(promises.splice(0, n))
 
     ret = [...ret, ...batchResult]
 
