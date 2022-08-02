@@ -26,7 +26,7 @@ export function mem (callback: Function): Mem {
     set: (key: string, value: any, ttl = 0) =>
       n.set(key, {
         value,
-        expiration: ttl !== 0 ? new Date().getTime() + ttl : 0
+        expiration: ttl !== 0 ? new Date().getTime() + (+ttl) : 0
       }),
 
     del: (key: string): void => {
