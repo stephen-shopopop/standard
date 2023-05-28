@@ -43,7 +43,11 @@ export function make (maxSubscribers = 20): Make {
       queueMicrotask(() => {
         const i = (n.get(topic) ?? [])
           .slice()
-          .map(fn => fn(data))
+          .map(fn => {
+            try {
+              fn(data)
+            } catch { /** */ }
+          })
           .length
 
         if (i > limit) {
